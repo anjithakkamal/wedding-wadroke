@@ -44,10 +44,40 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
+	<style>
+	/* Fullscreen background video setup */
+#fh5co-header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* behind overlay and text */
+}
 
+/* Overlay stays above video */
+#fh5co-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* slight dark tint for readability */
+  z-index: 1;
+}
+
+/* Ensure text and heading appear above video and overlay */
+#fh5co-header .container,
+#fh5co-header .display-tc {
+  position: relative;
+  z-index: 2;
+}
+
+</style>
 	</head>
 	<body>
+		
 		
 	<div class="fh5co-loader"></div>
 	
@@ -61,6 +91,8 @@
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+
 						<li><a href="contact.html">Contact</a></li>
 						<li><a href="login.html" >Login</a></li>
 						<li><a href="registration.html" >registration</a></li>
@@ -71,25 +103,32 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/wegging.png);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
+		<!-- Background video -->
+		<video autoplay muted loop playsinline>
+		  <source src="indexcover.mp4" type="video/mp4">
+		  Your browser does not support the video tag.
+		</video>
+	  
+		<!-- Overlay -->
 		<div class="overlay"></div>
+	  
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t">
-						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Wediing Wardrobe</h1>
-							<h2>Walking down the aisle, wrapped in love and lace.</h2>
-							<!-- <div class="simply-countdown simply-countdown-one"></div> -->
-							<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
-						</div>
-					</div>
+		  <div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center">
+			  <div class="display-t">
+				<div class="display-tc animate-box" data-animate-effect="fadeIn">
+				  <h1>Wedding Wardrobe</h1>
+				  <h2>Walking down the aisle, wrapped in love and lace.</h2>
 				</div>
+			  </div>
 			</div>
+		  </div>
 		</div>
-	</header>
+	  </header>
+	  
 
-	<div id="fh5co-couple">
+	<!-- <div id="fh5co-couple">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -120,9 +159,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+	<!-- <div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -226,7 +265,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
@@ -323,7 +362,7 @@
 			</div>
 		</div>
 	</div>
-
+<!-- 
 	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -375,7 +414,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="fh5co-testimonial">
 		<div class="container">

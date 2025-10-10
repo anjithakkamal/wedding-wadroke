@@ -50,7 +50,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: url("images/wedd.jpg") no-repeat center center/cover;
+      /* background: url("images/bg.jpg") no-repeat center center/cover; */
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -164,70 +164,67 @@
         font-size: 24px;
         color: #333;
       }
+      video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video fills the screen without distortion */
+  z-index: -1; /* Sends it behind everything */
+  opacity: 0.85; /* Optional: make it slightly dim for readability */
+}
+
   </style>
   </head>
-  <body>
-    	
-	<div class="fh5co-loader"></div>
-     <div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2">
-					<div id="fh5co-logo"><img src="images/logo.png" width="75px" height="75px"></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<!-- <li><a href="about.html">Story</a></li> -->
-						<li><a href="womens.html">Womens</a></li>
-						<li><a href="mens.html">Mens</a></li>
-						<li class="has-dropdown">
-							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-						<li class="active"><a href="login.html" >Login</a></li>
-						<li><a href="registration.html" >registration</a></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-    </div>
+<body>
+  <!-- Background video -->
+  <video autoplay muted loop playsinline>
+    <source src="indexcover.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-    <!-- <div class="login-container"> -->
-        
-      <div class="login-container">
-        <h1>Login</h1>
-        <form action="login.php" method="post">
-          
-          <!-- Email -->
-          <input type="email" class="form-control" name="email" placeholder="Enter Email" required>
-          
-          <!-- Password -->
-          <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
-          
-          <!-- Role Dropdown -->
-          <select name="role" class="form-control" required>
-            <option value="">-- Select Role --</option>
-            <option value="admin">Admin</option>
-            <option value="user">User</option>
-            <!-- <option value="patient">Patient</option> -->
-          </select>
-    
-          <!-- Submit Button -->
-          <button type="submit">Login</button>
-        </form>
-      </div>
-      <p>Don’t have an account? <a href="registration.html">Register</a></p>
-    </div>
+  <div class="fh5co-loader"></div>
+
+  <div id="page">
+    <nav class="fh5co-nav" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><img src="images/logo.png" width="75px" height="75px"></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+	
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="login.html" >Login</a></li>
+							<li><a href="registration.html" >registration</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+  </div>
+
+  <!-- Login form container -->
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="login.php" method="post">
+      <input type="email" class="form-control" name="email" placeholder="Enter Email" required>
+      <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+      <select name="role" class="form-control" required>
+        <option value="">-- Select Role --</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don’t have an account? <a href="registration.html">Register</a></p>
+  </div>
+</body>
 
     	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

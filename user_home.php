@@ -55,17 +55,33 @@ $username = isset($_SESSION['name']) ? $_SESSION['name'] : '';
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
+<style>
+	.navbar {
+    background: transparent !important;  /* keep navbar transparent */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* black shadow under navbar */
+    backdrop-filter: blur(4px); /* optional soft blur effect */
+}
 
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;  /* white text for visibility */
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00 !important; /* golden hover effect */
+}
+
+</style>
 </head>
 
 <body>
-
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-		<nav class="fh5co-nav" role="navigation">
-			<div class="container">
-				<div class="row">
+		<nav class="fh5co-nav " role="navigation">
+			<div class="container navbar ">
+				<div class="row ">
 					<div class="col-xs-2">
 						<div id="fh5co-logo"><img src="images/logo.png" width="75px" height="75px"></div>
 					</div>

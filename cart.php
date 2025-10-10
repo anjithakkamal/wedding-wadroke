@@ -110,6 +110,22 @@ h2 {
     object-fit: cover;
     border-radius: 5px;
 }
+.navbar {
+    background: transparent !important;  /* keep navbar transparent */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* black shadow under navbar */
+    backdrop-filter: blur(4px); /* optional soft blur effect */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;  /* white text for visibility */
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00 !important; /* golden hover effect */
+}
+
 </style>
 </head>
 <body style="background-image:url(images/wegging.png);">
